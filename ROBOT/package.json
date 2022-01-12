@@ -1,0 +1,23 @@
+{
+  "name": "robot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "robot.js",
+  "scripts": {
+    "devStart": "nodemon robot.js"
+  },
+  "author": "LEBRETON Gaëtan",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "express": "^4.17.2",
+    "fetch": "^1.1.0",
+    "fs": "^0.0.1-security",
+    "mongoose": "^6.1.5",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.15"
+  }
+}
