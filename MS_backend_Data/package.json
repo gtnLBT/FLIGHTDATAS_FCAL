@@ -1,0 +1,19 @@
+{
+  "name": "ms_backend_data",
+  "version": "1.0.0",
+  "description": "MicroService Node.js pour la partie backend data du projet DATAFLIGHT_FCAL",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "Gaëtan LEBRETON",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
