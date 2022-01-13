@@ -1,4 +1,5 @@
 require('dotenv').config();
+var PORT = process.env.PORT || 3000;
 const express = require('express')
 const app = express()
 const request = require('request')
@@ -34,7 +35,9 @@ function getAllFlights() {
                     return console.error(err);
                 } else {
                     console.log("Multiple documents Inserted to collection")
+                    mongoose.connection.close()
                 }
+                
             })
         }
     });
@@ -58,7 +61,7 @@ const Flight = require('./flight.js')
 
 
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log('Server connected')
 })
 

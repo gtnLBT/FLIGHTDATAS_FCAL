@@ -4,7 +4,8 @@
   "description": "",
   "main": "robot.js",
   "scripts": {
-    "devStart": "nodemon robot.js"
+    "devStart": "nodemon robot.js",
+    "start":"node robot.js"
   },
   "author": "LEBRETON Gaëtan",
   "license": "ISC",
