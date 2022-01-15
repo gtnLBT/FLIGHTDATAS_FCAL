@@ -2,16 +2,17 @@
   "name": "ms_backend_data",
   "version": "1.0.0",
   "description": "MicroService Node.js pour la partie backend data du projet DATAFLIGHT_FCAL",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon server.js"
   },
   "author": "Gaëtan LEBRETON",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^11.0.0",
     "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
     "mongoose": "^6.1.6",
     "uuid": "^8.3.2"
   },
