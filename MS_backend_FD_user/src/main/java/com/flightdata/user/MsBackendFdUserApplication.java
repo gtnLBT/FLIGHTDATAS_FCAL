@@ -1,13 +1,13 @@
-package com.dataflight.usersms;
+package com.flightdata.user;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MsBackendUserApplication {
+public class MsBackendFdUserApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MsBackendUserApplication.class, args);
+		SpringApplication.run(MsBackendFdUserApplication.class, args);
 	}
 
 }

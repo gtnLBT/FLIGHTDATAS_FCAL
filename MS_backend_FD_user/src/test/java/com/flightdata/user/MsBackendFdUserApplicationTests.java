@@ -1,10 +1,10 @@
-package com.dataflight.usersms;
+package com.flightdata.user;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MsBackendUserApplicationTests {
+class MsBackendFdUserApplicationTests {
 
 	@Test
 	void contextLoads() {
