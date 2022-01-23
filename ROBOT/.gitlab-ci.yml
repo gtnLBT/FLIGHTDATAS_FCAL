@@ -1,0 +1,14 @@
+stages:
+    - deploy
+
+deploy:
+    image: ruby:latest
+    stage: deploy
+    before_script:
+        - git config --global user.email "gaetan.lebreton@live.fr"
+        - git config --global user.email "gtnLBT"
+        - gem install dpl
+    script:
+        - dpl --provider=heroku --app=$HEROKU_APP_NAME --api-key=$HEROKU_API_KEY
+    only:
+        - master

@@ -1,0 +1,45 @@
+<h2>Liste des utilisateurs</h2>
+<table class="table table-stripped" style="margin-bottom: 100px;">
+    <thead>
+        <tr>
+            <th> id</th>
+            <th> First Name</th>
+            <th> Last Name</th>
+            <th> Username</th>
+            <th> Pilot Licence Number</th>
+            <th> Company Name</th>
+            <th> Home Base</th>
+            <th> Email</th>
+            <th> Address</th>
+            <th> Zip</th>
+            <th> City</th>
+            <th> Country</th>
+            <th> Roles</th>
+            <th> Enabled</th>
+            <th> <b>Actions</b></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let user of users">
+            <td> {{user.user_id}}</td>
+            <td> {{user.firstName}}</td>
+            <td> {{user.lastName}}</td>
+            <td> {{user.username}}</td> 
+            <td> {{user.pilotLicenceNumber}}</td> 
+            <td> {{user.companyName}}</td> 
+            <td> {{user.homeBase}}</td> 
+            <td> {{user.email}}</td>
+            <td> {{user.address}}</td>
+            <td> {{user.zip}}</td>
+            <td> {{user.city}}</td>
+            <td> {{user.country}}</td> 
+            <td> {{user.roles}}</td> 
+            <td> {{user.enabled}}</td>
+            <td>
+                <button (click) = "updateUser(user.user_id!)" class = "btn btn-warning" style="margin: 5px; width: 100px;"> Modifier</button>
+                <button (click) = "deleteUser(user.user_id!)" class = "btn btn-danger" style="margin: 5px; width: 100px;"> Supprimer</button>
+                <button (click) = "userDetails(user.user_id!)" class = "btn btn-primary" style="margin: 5px; width: 100px;"> Visualiser</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

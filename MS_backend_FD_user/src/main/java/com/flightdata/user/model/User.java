@@ -39,6 +39,7 @@ public class User {
 	private String email;
 	private String password;
 	private String address;
+	private String zip;
 	private String city;
 	private String country;
 	private Boolean enabled;
@@ -63,7 +64,7 @@ public class User {
 	}
 	
 	public User(String firstName, String lastName, String username, String pilotLicenceNumber, String companyName,
-			String homeBase, String email, String password, String address, String city, String country,
+			String homeBase, String email, String password, String address, String city,String zip, String country,
 			Boolean enabled, List<Role> roles, List<AircraftType> aircraftTypes, List<Flight> flightRecords) {
 		super();
 		this.firstName = firstName;
@@ -76,6 +77,7 @@ public class User {
 		this.password = password;
 		this.address = address;
 		this.city = city;
+		this.zip = zip;
 		this.country = country;
 		this.enabled = enabled;
 		this.roles = roles;
@@ -209,6 +211,14 @@ public class User {
 
 	public void setFlightRecords(List<Flight> flightRecords) {
 		this.flightRecords = flightRecords;
+	}
+
+	public String getZip() {
+		return zip;
+	}
+
+	public void setZip(String zip) {
+		this.zip = zip;
 	}
 	
 	

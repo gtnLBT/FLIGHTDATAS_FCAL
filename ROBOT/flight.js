@@ -16,6 +16,6 @@ const flightSchema = new Schema({
     "arrivalAirportCandidatesCount": Number,
   });
 
-const Flight = mongoose.model('Flight', flightSchema,'flightStore')
+const Flight = mongoose.model('Flight', flightSchema,'flightStore_2')
 
 module.exports = Flight
