@@ -23,6 +23,8 @@ public class Role {
 		super();
 		this.role = role;
 	}
+	
+	 
 
 	public Long getRole_id() {
 		return role_id;

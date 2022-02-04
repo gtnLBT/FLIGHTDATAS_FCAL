@@ -1,23 +1,54 @@
 
-<h1 class="text-center">{{title}}</h1>
-<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-  <ul class="navbar-nav">
-    <li class="nav-item">
-      <a routerLink="home" routerLinkActive="active" class="nav-link">Accueil</a>
-    </li>
-    <li class="nav-item">
-      <a routerLink="create-user" routerLinkActive="active" class="nav-link">S'inscrire</a>
-    </li>
-    <li class="nav-item">
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Administration
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="background-color: blue;">
-          <a routerLink="users" routerLinkActive="active" class="nav-link">Liste des utilisateurs</a>
-        </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-5" style="background-color: black;text-align:right;margin-left:-250px; margin-right:0">
+    <img src="../assets/img/FLIGHT DATAS ANALYSOR.png" alt="home picture" style="width: 200px;height:200px;padding:17px;">
+    </div>
+    <div class="col-5" style="background-color: black;text-align:left;padding-top:25px;color:rgb(255,140,0);border-radius: 0 100px 100px 0;">
+      <h1>CONFIRMEZ VOS VOLS,</h1>
+      <H2>COMPAREZ VOS PERFS,</H2>
+      <H3>DEBREIFEZ !</H3>
       </div>
+    <div class="col-2" >
+      <ul class="navbar-nav mal-auto" style="margin-top:25%;margin-left:50px;">
+        <li><a class="nav-link"><h3>Bienvenue {{authService.loggedUsername}} !</h3></a></li>
+        <li class="nav-item dropdown" style="width:200px;">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" style="color: black;font-size:23px">
+            <b>connexion</b>
+          </a>
+          <div class="dropdown-menu">
+            <a *ngIf="!authService.isloggedIn" routerLink="create-user" routerLinkActive="active" class="nav-link" style="color: black;margin-left:17px;font-size:18px"><b>register</b></a>
+            <a *ngIf="!authService.isloggedIn" routerLink="login" routerLinkActive="active" class="drop-down-item" style="color: black;margin-left:17px;text-decoration: none;font-size:18px"><b>login</b></a>
+            <a *ngIf="authService.isloggedIn" class="dropdown-item" (click) = "onLogout()" style="font-size:18px"><b>logout</b></a>
+            
+          </div>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+  
+</div>
+<nav class="navbar navbar-expand-sm navbar-dark" style="background-color: rgb(255,140,0);">
+  <ul class="navbar-nav">
+    <li class="nav-item" style="padding-left: 50px;">
+      <a routerLink="home" routerLinkActive="active" class="nav-link" style="font-size:18px"><b> | Accueil |</b></a>
     </li>
+    <li class="nav-item" style="padding-left: 50px;">
+       <a routerLink="user-operations" routerLinkActive="active" class="nav-link" style="font-size:18px"><b> | Gestion des Opérations | </b></a>
+    </li>
+    <li class="nav-item" style="padding-left: 50px;">
+      <a routerLink="comparator" routerLinkActive="active" class="nav-link" style="font-size:18px"><b> | Podium Perfos | </b></a>
+   </li>
+    <li *ngIf="authService.isAdmin()" class="nav-item dropdown" style="padding-left: 50px;">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:18px">
+        <b> | Administrateur | </b>
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="background-color: blue;">
+        <a routerLink="users" routerLinkActive="active" class="nav-link">Liste des utilisateurs</a>
+      </div>
+  </li>
     
   </ul>
 </nav>
@@ -25,8 +56,7 @@
   <router-outlet></router-outlet>
 </div>
 <footer class="footer">
-  <div class="container">
-    <span>All Rights Reserved 2022 @AéroData</span>
+  <div class="container" style="margin-top:20px;color:rgb(255,140,0);">
+    <span><b>All Rights Reserved 2022 @AéroData</b></span>
   </div>
-
 </footer>

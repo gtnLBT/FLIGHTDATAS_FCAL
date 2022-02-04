@@ -7,7 +7,49 @@
     bottom: 0;
     width: 100%;
     height: 70px;
-    background-color: blue;
+    background-color: black;
     text-align: center;
     color: white;
 }
+
+.table-fixed>thead>tr>th{
+    border: 0 !important;
+}
+
+.table-fixed>thead>tr>td>tfoot:last-child{
+    border-right: 0;
+}
+
+.table-fixed tbody{
+    display: block;
+    height: 265px;
+    overflow-y: auto;
+}
+
+.table-fixed tr{
+    display: block;
+}
+
+.table-fixed tbody td,
+.table-fixed thead>tr>th>tfoot{
+    float:unset; 
+    font-size: 14px;
+    padding-left: 20px !important;
+}
+
+.table-fixed .col{
+    width: 18%;
+}
+
+th{
+    width: 18%;
+}
+
+td{
+    width: 18%;
+}
+
+th{
+    width: 18%; 
+}
+

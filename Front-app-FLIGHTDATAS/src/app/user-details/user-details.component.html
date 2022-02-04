@@ -1,5 +1,5 @@
 <h3>Visualisation des détails de <b>{{user?.username}}</b></h3>
-<div style="margin-bottom: 100px;">
+<div class="container" tyle="margin-bottom: 100px;">
     <div>
         <label><b>Prénom : </b></label> {{user?.firstName}}
     </div>
@@ -22,19 +22,19 @@
         <label><b>adresse : </b></label> {{user?.address}}
     </div>
     <div>
-        <label><b>Ville : </b></label> {{user?.city}}
-    </div>
-    <div>
         <label><b>Code Postal : </b></label> {{user?.zip}}
     </div> 
+    <div>
+        <label><b>Ville : </b></label> {{user?.city}}
+    </div>
     <div>
         <label><b>Pays : </b></label> {{user?.country}}
     </div>
     <div>
-        <label><b>Roles attribués : </b></label> {{user?.roles}}
+        <label><b>Roles attribués : </b></label><option *ngFor="let role of user?.roles" [value]=role>{{role.role}}</option>
     </div>
     <div>
-        <label><b>Qualifications de Types en cours : </b></label> {{user?.aircraftTypes}}
+        <label><b>Qualifications de Types en cours : </b></label> <option *ngFor="let aircraftType of user?.aircraftTypes" [value]=aircraftType>{{aircraftType.aircrafttypeicao}}</option>
     </div>
     <div>
         <label><b>Vols confirmés sur la plateforme : </b></label> {{user?.flightRecords}}

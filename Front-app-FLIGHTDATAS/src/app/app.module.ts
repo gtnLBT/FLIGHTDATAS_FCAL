@@ -8,8 +8,12 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { FormsModule } from '@angular/forms';
 import { UpdateUserComponent } from './update-user/update-user.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
-import { AuthentificationComponent } from './authentification/authentification.component';
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { ForbiddenComponent } from './forbidden/forbidden.component';
+import { UserOperationsComponent } from './user-operations/user-operations.component';
+import { ConvertsecondestomillisPipe } from './_pipes/convertsecondestomillis.pipe';
+import { ComparatorComponent } from './comparator/comparator.component';
 
 @NgModule({
   declarations: [
@@ -18,8 +22,12 @@ import { HomeComponent } from './home/home.component';
     CreateUserComponent,
     UpdateUserComponent,
     UserDetailsComponent,
-    AuthentificationComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent,
+    ForbiddenComponent,
+    UserOperationsComponent,
+    ConvertsecondestomillisPipe,
+    ComparatorComponent
   ],
   imports: [
     BrowserModule,

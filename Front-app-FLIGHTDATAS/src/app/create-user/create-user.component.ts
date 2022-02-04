@@ -20,13 +20,13 @@ export class CreateUserComponent implements OnInit {
   saveUser(){
     this.userService.createUser(this.user).subscribe( data => {
       console.log(data);
-      this.goToUserList();
+      this.goToLogin();
     },
     error => console.log(error));
   }
 
-  goToUserList(){
-    this.router.navigate(['/users']);
+  goToLogin(){
+    this.router.navigate(['/login']);
   }
 
   onSubmit(){
